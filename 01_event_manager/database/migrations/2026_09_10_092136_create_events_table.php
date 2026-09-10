@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('events', function (Blueprint $table) {
             $table->id();  // elsődleges kulcs
+            $table->string('title');  // esemény neve
             $table->text('description');  // esemény leírása
             $table->dateTime('event_date');  // esemény kezdete
             $table->timestamps();  // létrehozás és frissítés dátuma
